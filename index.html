@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        #inputField {
+            padding: 10px;
+            width: 200px;
+        }
+        #startButton, #submitButton {
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        #startButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #submitButton {
+            background-color: #008CBA;
+            color: white;
+        }
+        #imageArea {
+            margin-top: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz Cumpleaños elmin mi amor! </h1>
+    
+    <!-- Adding the Spider-Man Image -->
+    <div id="imageArea">
+        <img src="https://i.pinimg.com/originals/f9/2e/56/f92e564c1344fb950430421bd4bd6f6c.jpg">
+    </div>
+    
+    <div id="output">Para iniciar, presiona el botón "Start".</div>
+
+    <button id="startButton" onclick="startProgram()">Start</button>
+
+    <div id="inputArea" style="display:none;">
+        <input type="text" id="inputField" placeholder="Escribe un número o 'quit'">
+        <button id="submitButton" onclick="processInput()">Submit</button>
+    </div>
+
+    <script>
+        let started = false;
+
+        function startProgram() {
+            started = true;
+            document.getElementById("output").innerText = "Escribe un número de 1 hasta tu edad actual ♡";
+            document.getElementById("inputArea").style.display = "block";
+            document.getElementById("startButton").style.display = "none";
+        }
+
+        function processInput() {
+            const userInput = document.getElementById("inputField").value;
+            let message = "";
+
+            if (userInput === "quit") {
+                document.getElementById("output").innerText = "Programa terminado.";
+                document.getElementById("inputArea").style.display = "none";
+            } else if (started) {
+                switch (userInput) {
+                    case "1":
+                        message = "Estoy muy agradecida con la vida por haberme dado el mejor regalo, es decir, tú.";
+                        break;
+                    case "2":
+                        message = "Muchas cosas que disfruto en mi día a día me recuerdan a ti, porque deseo fervientemente estar pasando esos momentos a tu lado.";
+                        break;
+                    case "3":
+                        message = "Tú iluminas mi mundo.";
+                        break;
+                    case "4":
+                        message = " Eres la razón de mi sonrisa en innumerables ocasiones."
+                        break;
+                    case "5":
+                        message = "Siento el palpitar de mi corazón acelerado cada vez que hablo contigo, pero ni eso demuestra lo mucho que me importas, de tanto que lo haces."
+                        break;
+                    case "6":
+                        message = "Te admiro por ser una persona tan resiliente y hermosa; confío en que cumplirás todas tus metas, confío en ti."
+                        break;
+                    case "7":
+                        message = "Mi conexión contigo es innegable e inexorable; sin el otro, somos dos almas merodeando por el mundo sin su otra mitad."
+                        break;
+                    case "8":
+                        message = " “Cada vez que pienses que no eres lo suficientemente bueno, recuerda: Si esta niña te quiere… ¿qué tan malo puedes ser?"
+                        break;
+                    case "9":
+                        message = " Eres suficiente para mí, no necesito a nadie más, solo quiero estar contigo y a tu lado ♡."
+                        break;
+                    case "10":
+                        message = "Comprendo que necesitas una mujer fuerte a tu lado, que esté a tu nivel; te prometo que, a pesar de todo, sigo luchando para lograrlo, te quiero a ti, sigo en el camino de convertirme en mi mejor versión, siendo así merecedora de un hombre como tú."
+                        break;
+                    case "11":
+                        message = "Recuerda, corazón, todo lo que te compone te hace un gran hombre, el mejor si me lo preguntas ♡."
+                        break;
+                    case "12":
+                        message = "“Todo estará bien al final, y si no lo está, aún no has llegado al final.”"
+                        break;
+                    case "13":
+                        message = "Pronto estaremos juntos; l’amore trova la strada."
+                        break;
+                    case "14":
+                        message = "Eres todo para mí: mi pasado, mi presente y mi futuro."
+                        break;
+                    case "15":
+                        message = "Para ti: https://youtu.be/hfABkoRgNRg?si=qIL7zXOTo1SFejxe"
+                        break;
+                    case "16":
+                        message = " Eres el hombre de mis ojos y el amor de mi vida."
+                        break;
+                    case "17":
+                        message = "Eres mi sol; me siento como la Tierra, la cual, seducida por los encantos del sol, no encuentra otra opción que girar alrededor de este, admirándolo, contemplando la belleza que posee, sin más remedio, pero sin importarle, porque vivirá eternidades rotando felizmente alrededor de lo que la cautiva."
+                        break;  
+                    case "18":
+                        message = "Has pasado por innumerables inconvenientes, pero yo sinceramente pienso que mientras estemos juntos, todo estará bien, ya que estaremos donde pertenecemos. Siempre agradecida de tenerte y estar contigo."
+                        break;
+                    case "19":
+                        message = "1010100 1000101   1000001 1001101 1001111"
+                        break;     
+                 
+                    default:
+                        message = "Número no reconocido.";
+                }
+                document.getElementById("output").innerText = message;
+                document.getElementById("inputField").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
